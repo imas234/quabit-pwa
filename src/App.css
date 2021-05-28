@@ -6,6 +6,8 @@
   --accent-color: #98E9E9;
   --card: #483E55;
   --card-active: #537979;
+  --container-width: 80vw;
+  --card-width: 55vw;
 }
 
 body{
@@ -20,6 +22,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-y: hidden;
 }
 
 .card-container{
@@ -27,15 +30,13 @@ body{
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
-  height: 80vh;
-  width: 75vw;
-  padding: 1em;
-  margin-top: 1.25em;
-  margin-bottom: 0.5em;
+  height: 84vh;
+  width: var(--container-width);
+  margin-top: 1.7em;
 }
 
 .card-container::-webkit-scrollbar {
-  width: 0.25em;
+  width: 0.15em;
   background-color: var(--card);
   border-radius: 4px;
 }
@@ -49,7 +50,7 @@ body{
   margin-bottom: 1em;
   border-radius: 1em;
   background-color: var(--card);
-  width: 55vw;
+  width: var(--card-width);
   height: auto;
   padding: 2em;
   cursor: pointer;
@@ -84,15 +85,17 @@ body{
   color: var(--accent-color);
   font-size: 1.5rem;
   font-weight: 800;
-  width: 80vw;
-  padding: 1em;
+  width: var(--container-width);
+  margin: 1em 0em;
 }
 
 .add-button{
-  padding: 0.002em 0.6em;
+  padding: 0.05em 0.8em;
   border-radius: 1em;
+  font-size: 1.3rem;
   background-color: var(--card);
   transition: all 300ms ease-in-out;
+  cursor: pointer;
 }
 
 .add-button:active{

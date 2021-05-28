@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Card from './Card';
+import AddButton from './AddButton'
 
 const CardDeck = (props) => {
     useEffect(() => {
@@ -16,7 +17,7 @@ const CardDeck = (props) => {
             </div>
             <div className="app-bar">
                 <div>Quabit</div>
-                <div className="add-button">+</div>
+                <AddButton/>
             </div>
         </div>
     );

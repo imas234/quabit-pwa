@@ -6,9 +6,6 @@
   --accent-color: #98E9E9;
   --card: #483E55;
   --card-active: #537979;
-  --scrollbar-thumb: #483E55;
-  --scrollbar: #2e2736;
-
 }
 
 body{
@@ -18,7 +15,7 @@ body{
 }
 
 .deck-area{
-  height: 100%;
+  /* background-color: var(--bg-color); */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,22 +26,22 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: auto;
+  height: 80vh;
+  width: 75vw;
   padding: 1em;
   margin-top: 1.25em;
   margin-bottom: 0.5em;
-  height: 80vh;
-  width: 75vw;
-  overflow-y: auto;
 }
 
 .card-container::-webkit-scrollbar {
   width: 0.25em;
-  background-color: var(--scrollbar);
+  background-color: var(--card);
   border-radius: 4px;
 }
  
 .card-container::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-thumb);
+  background-color: var(--accent-color);
   border-radius: 4px;
 }
 
@@ -55,12 +52,6 @@ body{
   width: 55vw;
   height: auto;
   padding: 2em;
-  box-shadow:
-    0 2.2px 2.5px rgba(52, 45, 61, 0.005),
-    0 2.9px 5.6px rgba(52, 45, 61, 0.009),
-    0 3.2px 9.3px rgba(52, 45, 61, 0.012),
-    0 3.4px 14.1px rgba(52, 45, 61, 0.014)
-  ;
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
@@ -88,16 +79,25 @@ body{
 .app-bar{
   display: flex;
   flex-direction: row;
-  width: 80vw;
+  justify-content: space-between;
+  align-items: center;
   color: var(--accent-color);
   font-size: 1.5rem;
   font-weight: 800;
+  width: 80vw;
   padding: 1em;
-  /* padding-top: 1.25em; */
 }
 
 .add-button{
-  margin-left: auto;
+  padding: 0.002em 0.6em;
+  border-radius: 1em;
+  background-color: var(--card);
+  transition: all 300ms ease-in-out;
+}
+
+.add-button:active{
+  background-color: var(--card-active);
+  transition: all 100ms;
 }
 
 .no-select {

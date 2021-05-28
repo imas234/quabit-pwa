@@ -91,7 +91,7 @@ body{
 
 .add-button{
   padding: 0.05em 0.8em;
-  border-radius: 1em;
+  border-radius: 0.5em;
   font-size: 1.3rem;
   background-color: var(--card);
   transition: all 300ms ease-in-out;

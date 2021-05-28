@@ -1,9 +1,11 @@
+import { observer } from 'mobx-react-lite';
 import React, { useState } from 'react';
+import store from '../store/Quabit';
 
-const Card = ({title}) => {
-    const [streak, setStreak] = useState(0);
+const Card = ({id, title, streak}) => {
+    const {incrementStreak} = store;
     return (
-        <div className='card no-select' onClick={() => setStreak(streak + 1)}>
+        <div className='card no-select' onClick={incrementStreak(id)}>
             <div>
                 <div className="title-container">
                     <div className="card-title">{title}</div>
@@ -14,6 +16,6 @@ const Card = ({title}) => {
             </div>
         </div>
     );
-}
+};
 
-export default Card;
+export default observer(Card);

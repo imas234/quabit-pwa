@@ -1,20 +1,15 @@
 import React, { useEffect } from 'react';
-import Card from './Card';
-import AddButton from './AddButton'
+import AddButton from './AddButton';
+import CardContainer from './CardContainer';
+import store from '../store/Quabit';
 
 const CardDeck = (props) => {
-    useEffect(() => {
-        
-    }, []);
+    const list = Object.values(store.list);
+    // useEffect(() => {
+    // }, []);
     return (
         <div className="deck-area">
-            <div className='card-container'>
-                <Card title={'quit this please dude just quit ok just do it man you can do it'}/>
-                <Card title={'ooka pooka'}/>
-                <Card title={'ooka pook'}/>
-                <Card title={'ook pooka'}/>
-                <Card title={'ook pook'}/>
-            </div>
+            <CardContainer list={list}/>
             <div className="app-bar">
                 <div>Quabit</div>
                 <AddButton/>

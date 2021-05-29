@@ -19,8 +19,9 @@ class CardStore {
         };
     }
 
-    editCard(id, edit) {
-        this.list[id].title = edit;
+    editCard(id, title, streak) {
+        this.list[id].title = title;
+        this.list[id].streak = streak;
     }
 
     deleteCard(id) {
@@ -29,11 +30,6 @@ class CardStore {
 
     incrementStreak(id) {
         this.list[id].streak += 1;
-    }
-
-    decrementStreak(id) {
-        this.list[id].streak = (this.list[id].streak 
-            ? this.list[id].streak - 1 : 0);
     }
 }
 

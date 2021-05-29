@@ -6,13 +6,13 @@
   --accent-color: #98E9E9;
   --card: #483E55;
   --card-active: #537979;
+  --danger: #F25A85;
   --container-width: 80vw;
   --card-width: 55vw;
 }
 
 body{
   font-family: 'Montserrat', sans-serif;
-  color:  var(--text-color);
   background-color: var(--bg-color);
 }
 
@@ -53,28 +53,28 @@ body{
   width: var(--card-width);
   height: auto;
   padding: 2em;
+}
+
+.pressable{
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
 
-.card:active {
+.pressable:active {
   background-color: var(--card-active);
   transition: all 100ms;
 }
 
 .card-title{
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
-  margin-bottom: 0.5em;
   font-weight: 800;
 }
 
 .card-streak-container{
   display: flex;
   justify-content: flex-end;
-  color: var(--accent-color);
-  padding-top: 1.25em;
-  font-size: 1rem;
-  font-weight: 800;
 }
 
 .app-bar{
@@ -103,6 +103,35 @@ body{
   transition: all 100ms;
 }
 
+.adjust-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 4em;
+}
+
+.card-streak{
+  color: var(--accent-color);
+  padding-top: 1.25em;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.adjust-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0em solid transparent;
+  border-radius: 1em;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.adjust-button:active{
+  background-color: var(--card-active);
+  transition: all 100ms ease-in-out;
+}
+
 .edit-title{
   background: transparent;
   outline: none;
@@ -110,11 +139,26 @@ body{
   overflow: auto;
   border: none;
   width: 100%;
+  height: auto;
   border-bottom: 0.2em solid var(--accent-color);
-  color: var(--text-color);
-  font-family: 'Montserrat', sans-serif;
+}
+
+.delete-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4em;
+}
+
+.delete-text{
+  color: var(--danger);
+  padding-left: 0.5em;
   font-size: 1rem;
   font-weight: 800;
+}
+
+.title-container{
+  margin-bottom: 1.2em;
 }
 
 .no-select {

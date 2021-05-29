@@ -103,6 +103,20 @@ body{
   transition: all 100ms;
 }
 
+.edit-title{
+  background: transparent;
+  outline: none;
+  resize: none;
+  overflow: auto;
+  border: none;
+  width: 100%;
+  border-bottom: 0.2em solid var(--accent-color);
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
 .no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;

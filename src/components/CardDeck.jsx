@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
 import AddButton from './AddButton';
 import CardContainer from './CardContainer';
-import store from '../store/Quabit';
+import store from '../store/CardStore';
+import { observer } from 'mobx-react-lite';
 
 const CardDeck = (props) => {
     const list = Object.values(store.list);
-    // useEffect(() => {
-    // }, []);
     return (
         <div className="deck-area">
             <CardContainer list={list}/>
@@ -18,4 +17,4 @@ const CardDeck = (props) => {
     );
 }
 
-export default CardDeck;
+export default observer(CardDeck);

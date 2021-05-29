@@ -1,17 +1,19 @@
 import { makeAutoObservable } from "mobx";
 
-class Quabit {
+class CardStore {
     list = {};
-    id = 0;
 
     constructor() {
         makeAutoObservable(this);
     }
 
     addCard(title) {
-        this.id += 1;
-        this.list[this.id] = {
-            id: this.id,
+        let id = Math.floor(Math.random() * 1000000).toString(16);
+        while(id in this.list) {
+            id = Math.floor(Math.random() * 1000000).toString(16);
+        }
+        this.list[id] = {
+            id,
             title,
             streak: 0,
         };
@@ -35,4 +37,4 @@ class Quabit {
     }
 }
 
-export default new Quabit();
+export default new CardStore();

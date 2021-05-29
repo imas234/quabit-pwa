@@ -2,9 +2,11 @@ import { observer } from 'mobx-react-lite';
 import React, { useEffect, useState } from 'react';
 import store from '../store/CardStore';
 import useLongPress from './useLongPress';
+import TextArea from 'react-textarea-autosize';
 import Trash from './svg/Trash';
 import Add from './svg/Add';
 import Remove from './svg/Remove';
+import Tick from './svg/Tick';
 
 const Card = ({id, title, streak}) => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -73,7 +75,7 @@ const Card = ({id, title, streak}) => {
                 :
                 <div>
                     <div className="title-container">
-                        <textarea
+                        <TextArea
                             className="edit-title card-title"
                             value={currentText}
                             onChange={(e) => handleChange(e)}
@@ -105,6 +107,12 @@ const Card = ({id, title, streak}) => {
                             {deletePressed ? 
                                 <span className="delete-text">Press again to delete</span> 
                                 : null}
+                        </div>
+                        <div 
+                            onClick={saveChanges}
+                            className="adjust-button no-select tick"
+                        >
+                            <Tick />
                         </div>
                     </div>
                 </div>

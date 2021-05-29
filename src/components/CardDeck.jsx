@@ -8,11 +8,11 @@ const CardDeck = (props) => {
     const list = Object.values(store.list);
     return (
         <div className="deck-area">
-            {/* <CardContainer list={list}/>
+            <CardContainer list={list}/>
             <div className="app-bar">
                 <div>Quabit</div>
                 <AddButton/>
-            </div> */}
+            </div>
         </div>
     );
 }

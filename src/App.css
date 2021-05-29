@@ -7,8 +7,8 @@
   --card: #483E55;
   --card-active: #537979;
   --danger: #F25A85;
-  --container-width: 80vw;
-  --card-width: 55vw;
+  --container-width: 85vw;
+  --card-width: 60vw;
 }
 
 body{
@@ -17,7 +17,7 @@ body{
 }
 
 .deck-area{
-  /* background-color: var(--bg-color); */
+  height: 97vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

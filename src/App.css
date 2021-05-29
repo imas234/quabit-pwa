@@ -11,6 +11,11 @@
   --card-width: 55vw;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body{
   font-family: 'Montserrat', sans-serif;
   background-color: var(--bg-color);

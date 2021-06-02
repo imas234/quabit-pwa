@@ -64,57 +64,56 @@ const Card = ({id, title, streak}) => {
             onClick={handlePress}
         >
             {!isExpanded ? 
-                <div className="title-container">
-                    <div className="card-title">{title}</div>
-                </div>
-                :
-                <div className="title-container">
-                    <TextArea
-                        className="edit-title card-title"
-                        value={currentText}
-                        onChange={(e) => handleChange(e)}
-                    />
-                </div>           
-            }
-            {!isExpanded ? 
-                <div className="card-streak-container">
-                    <div className="card-streak">{streak}</div>
+                <div>
+                    <div className="title-container">
+                        <div className="card-title">{title}</div>
+                    </div>
+                    <div className="card-streak-container">
+                        <div className="card-streak">{streak}</div>
+                    </div>
                 </div> 
-                : 
-                <div className="adjust-container card-streak">
-                    <div 
-                        className="adjust-button no-select"
-                        onClick={decrease}
-                    >
-                        <Remove size={24}/>
-                    </div>
-                    <div>{currentStreak}</div>                    
-                    <div
-                        className="adjust-button no-select"
-                        onClick={increase}
-                    >
-                        <Add size={24}/>
-                    </div>
-                </div>
-            }
-            {!isExpanded ? 
-                null 
                 :
-                <div className="delete-container">
-                    <div 
-                        onClick={deleteCard}
-                        className="adjust-button delete-button no-select"
-                    >
-                        <Trash color={'#F25A85'}/>
-                        {deletePressed ? 
-                            <span className="delete-text">Press again to delete</span> 
-                            : null}
+                <div>
+                    <div className="title-container">
+                        <TextArea
+                            className="edit-title card-title"
+                            value={currentText}
+                            onChange={(e) => handleChange(e)}
+                        />
                     </div>
-                    <div 
-                        onClick={saveChanges}
-                        className="adjust-button no-select tick"
-                    >
-                        <Tick />
+                    <div className="adjust-container card-streak">
+                        <div 
+                            className="adjust-button no-select"
+                            onClick={decrease}
+                        >
+                            <Remove size={24}/>
+                        </div>
+
+                        <div>{currentStreak}</div>
+                        
+                        <div
+                            className="adjust-button no-select"
+                            onClick={increase}
+                        >
+                            <Add size={24}/>
+                        </div>
+                    </div>
+                    <div className="delete-container">
+                        <div 
+                            onClick={deleteCard}
+                            className="adjust-button delete-button no-select"
+                        >
+                            <Trash color={'#F25A85'}/>
+                            {deletePressed ? 
+                                <span className="delete-text">Press again to delete</span> 
+                                : null}
+                        </div>
+                        <div 
+                            onClick={saveChanges}
+                            className="adjust-button no-select tick"
+                        >
+                            <Tick />
+                        </div>
                     </div>
                 </div>
             }

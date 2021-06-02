@@ -101,7 +101,7 @@ const Card = ({id, title, streak}) => {
                     <div className="delete-container">
                         <div 
                             onClick={deleteCard}
-                            className="adjust-button no-select"
+                            className="adjust-button delete-button no-select"
                         >
                             <Trash color={'#F25A85'}/>
                             {deletePressed ? 

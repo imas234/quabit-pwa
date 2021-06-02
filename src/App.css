@@ -7,6 +7,7 @@
   --card: #483E55;
   --card-active: #537979;
   --danger: #F25A85;
+  --danger-button: #88374e;
   --container-width: 80vw;
   --card-width: 55vw;
 }
@@ -122,13 +123,19 @@ body{
   align-items: center;
   justify-content: center;
   border: 0em solid transparent;
-  border-radius: 1em;
+  border-radius: 2em;
+  padding: 0.4em;
   transition: background-color 300ms ease-in-out;
   cursor: pointer;
 }
 
 .adjust-button:active{
   background-color: var(--card-active);
+  transition: background-color 100ms ease-in-out;
+}
+
+.delete-button:active{
+  background-color: var(--danger-button);
   transition: background-color 100ms ease-in-out;
 }
 
@@ -173,4 +180,21 @@ body{
   -ms-user-select: none;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
+}
+
+.fade-card-enter {
+  opacity: 0.01;
+  transform: translate(0, -10px);
+}
+.fade-card-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: opacity 300ms ease-in-out;
+}
+.fade-card-exit {
+  opacity: 1;
+}
+.fade-card-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in-out;
 }

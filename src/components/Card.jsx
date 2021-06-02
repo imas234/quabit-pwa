@@ -7,20 +7,23 @@ import Trash from './svg/Trash';
 import Add from './svg/Add';
 import Remove from './svg/Remove';
 import Tick from './svg/Tick';
+import {CSSTransition} from 'react-transition-group';
 
 const Card = ({id, title, streak}) => {
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [expanded, setExpanded] = useState(false);
+    const [mainView, setMainView] = useState(true);
+
     const [currentText, setCurrentText] = useState(title);
     const [currentStreak, setCurrentStreak] = useState(streak);
     const [deletePressed, setDeletePressed] = useState(false);
-    const longPress = useLongPress(() => setIsExpanded(true), 1000);
+    const longPress = useLongPress(() => setExpanded(true), 1000);
 
     useEffect(() => {
         setCurrentStreak(streak);
     }, [streak]);
 
     const saveChanges = () => {
-        setIsExpanded(false);
+        setExpanded(false);
         setDeletePressed(false);
 
         const editedText = (currentText === "" 
@@ -32,7 +35,7 @@ const Card = ({id, title, streak}) => {
     };
     
     const handlePress = () => {
-        if (isExpanded) return;
+        if (expanded) return;
         store.incrementStreak(id);
     };
 
@@ -59,11 +62,11 @@ const Card = ({id, title, streak}) => {
 
     return (
         <div 
-            className={`card${isExpanded ? "" : " pressable no-select"}`} 
+            className={`card${mainView ? " pressable no-select" : ""}`} 
             {...longPress}
             onClick={handlePress}
         >
-            {!isExpanded ? 
+            {(mainView && 
                 <div>
                     <div className="title-container">
                         <div className="card-title">{title}</div>
@@ -71,14 +74,23 @@ const Card = ({id, title, streak}) => {
                     <div className="card-streak-container">
                         <div className="card-streak">{streak}</div>
                     </div>
-                </div> 
-                :
+                </div>
+            )}            
+            <CSSTransition
+                in={expanded}
+                timeout={300}
+                classNames="fade-content"
+                unmountOnExit
+                onEnter={() => setMainView(false)}
+                onExited={() => setMainView(true)}
+            >
                 <div>
                     <div className="title-container">
                         <TextArea
                             className="edit-title card-title"
                             value={currentText}
                             onChange={(e) => handleChange(e)}
+                            autoFocus
                         />
                     </div>
                     <div className="adjust-container card-streak">
@@ -116,7 +128,7 @@ const Card = ({id, title, streak}) => {
                         </div>
                     </div>
                 </div>
-            }
+            </CSSTransition>
         </div>
     );
 };

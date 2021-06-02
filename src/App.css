@@ -190,15 +190,36 @@ body{
   opacity: 0.01;
   transform: translate(0, -10px);
 }
+
 .fade-card-enter-active {
   opacity: 1;
   transform: translate(0, 0);
   transition: opacity 300ms ease-in-out;
 }
+
 .fade-card-exit {
   opacity: 1;
 }
+
 .fade-card-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in-out;
+}
+
+.fade-content-enter {
+  opacity: 0.01;
+}
+
+.fade-content-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.fade-content-exit {
+  opacity: 1;
+}
+
+.fade-content-exit-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in-out;
 }

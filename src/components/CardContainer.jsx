@@ -13,8 +13,7 @@ const CardContainer = ({list}) => {
                         timeout={300}
                         classNames="fade-card"
                     >
-                        <Card 
-                            key={id}
+                        <Card
                             id={id}
                             title={title}
                             streak={streak}

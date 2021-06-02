@@ -90,7 +90,6 @@ const Card = ({id, title, streak}) => {
                             className="edit-title card-title"
                             value={currentText}
                             onChange={(e) => handleChange(e)}
-                            autoFocus
                         />
                     </div>
                     <div className="adjust-container card-streak">

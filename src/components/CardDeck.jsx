@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import AddButton from './AddButton';
 import CardContainer from './CardContainer';
 import store from '../store/CardStore';

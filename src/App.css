@@ -212,7 +212,7 @@ body{
 
 .fade-content-enter-active {
   opacity: 1;
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
 }
 
 .fade-content-exit {
@@ -221,5 +221,5 @@ body{
 
 .fade-content-exit-active {
   opacity: 0.01;
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
 }

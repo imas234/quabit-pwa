@@ -7,7 +7,7 @@
   --card: #483E55;
   --card-active: #537979;
   --danger: #F25A85;
-  --danger-button: #88374e;
+  --danger-button: #753A5B;
   --container-width: 80vw;
   --card-width: 55vw;
 }
@@ -124,7 +124,6 @@ body{
   justify-content: center;
   border: 0em solid transparent;
   border-radius: 2em;
-  padding: 0.4em;
   transition: background-color 300ms ease-in-out;
   cursor: pointer;
 }

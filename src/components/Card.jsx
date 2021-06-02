@@ -13,7 +13,7 @@ const Card = ({id, title, streak}) => {
     const [currentText, setCurrentText] = useState(title);
     const [currentStreak, setCurrentStreak] = useState(streak);
     const [deletePressed, setDeletePressed] = useState(false);
-    const longPress = useLongPress(() => setIsExpanded(!isExpanded), 1000);
+    const longPress = useLongPress(() => setIsExpanded(true), 1000);
 
     useEffect(() => {
         setCurrentStreak(streak);

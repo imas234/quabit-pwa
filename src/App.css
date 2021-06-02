@@ -57,12 +57,12 @@ body{
 
 .pressable{
   cursor: pointer;
-  transition: all 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 
 .pressable:active {
   background-color: var(--card-active);
-  transition: all 100ms;
+  transition: background-color 100ms;
 }
 
 .card-title{
@@ -94,13 +94,13 @@ body{
   border-radius: 0.5em;
   font-size: 1.3rem;
   background-color: var(--card);
-  transition: all 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
   cursor: pointer;
 }
 
 .add-button:active{
   background-color: var(--card-active);
-  transition: all 100ms;
+  transition: background-color 100ms;
 }
 
 .adjust-container{
@@ -123,13 +123,13 @@ body{
   justify-content: center;
   border: 0em solid transparent;
   border-radius: 1em;
-  transition: all 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
   cursor: pointer;
 }
 
 .adjust-button:active{
   background-color: var(--card-active);
-  transition: all 100ms ease-in-out;
+  transition: background-color 100ms ease-in-out;
 }
 
 .edit-title{

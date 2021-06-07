@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/quabit-pwa/static/css/main.1587346a.chunk.css",
-    "main.js": "/quabit-pwa/static/js/main.786893d6.chunk.js",
-    "main.js.map": "/quabit-pwa/static/js/main.786893d6.chunk.js.map",
+    "main.css": "/quabit-pwa/static/css/main.490bc714.chunk.css",
+    "main.js": "/quabit-pwa/static/js/main.6173f88e.chunk.js",
+    "main.js.map": "/quabit-pwa/static/js/main.6173f88e.chunk.js.map",
     "runtime-main.js": "/quabit-pwa/static/js/runtime-main.4e36c20b.js",
     "runtime-main.js.map": "/quabit-pwa/static/js/runtime-main.4e36c20b.js.map",
     "static/js/2.de68ce76.chunk.js": "/quabit-pwa/static/js/2.de68ce76.chunk.js",
@@ -12,13 +12,13 @@
     "index.html": "/quabit-pwa/index.html",
     "service-worker.js": "/quabit-pwa/service-worker.js",
     "service-worker.js.map": "/quabit-pwa/service-worker.js.map",
-    "static/css/main.1587346a.chunk.css.map": "/quabit-pwa/static/css/main.1587346a.chunk.css.map",
+    "static/css/main.490bc714.chunk.css.map": "/quabit-pwa/static/css/main.490bc714.chunk.css.map",
     "static/js/2.de68ce76.chunk.js.LICENSE.txt": "/quabit-pwa/static/js/2.de68ce76.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4e36c20b.js",
     "static/js/2.de68ce76.chunk.js",
-    "static/css/main.1587346a.chunk.css",
-    "static/js/main.786893d6.chunk.js"
+    "static/css/main.490bc714.chunk.css",
+    "static/js/main.6173f88e.chunk.js"
   ]
 }

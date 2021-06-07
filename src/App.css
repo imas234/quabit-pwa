@@ -8,8 +8,8 @@
   --card-active: #537979;
   --danger: #F25A85;
   --danger-button: #753A5B;
-  --container-width: 80vw;
-  --card-width: 55vw;
+  --container-width: 85vw;
+  --card-width: 60vw;
 }
 
 * {
@@ -23,7 +23,7 @@ body{
 }
 
 .deck-area{
-  height: 97vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -166,6 +166,7 @@ body{
   padding-left: 0.5em;
   font-size: 0.8rem;
   font-weight: 800;
+  max-width: 30vw;
 }
 
 .title-container{
@@ -212,7 +213,7 @@ body{
 
 .fade-content-enter-active {
   opacity: 1;
-  transition: opacity 200ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 .fade-content-exit {
@@ -220,6 +221,6 @@ body{
 }
 
 .fade-content-exit-active {
-  opacity: 0.01;
-  transition: opacity 200ms ease-in-out;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
 }

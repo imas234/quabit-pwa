@@ -78,7 +78,7 @@ const Card = ({id, title, streak}) => {
             )}            
             <CSSTransition
                 in={expanded}
-                timeout={300}
+                timeout={500}
                 classNames="fade-content"
                 unmountOnExit
                 onEnter={() => setMainView(false)}

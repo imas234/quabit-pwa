@@ -1,5 +1,5 @@
 # quabit-pwa
-react + mobx project that uses streaks to deter relapsing into bad habits, meant to be used from phones mainly. This was an idea I always had and I wanted to bring it to fruition with the added benefit of having
+react + mobx project that uses streaks to deter relapsing into bad habits, meant to be used from phones mainly. This was an idea I always had and I wanted to bring it to fruition with the added benefit of getting to pick up basic mobx concepts, look into react-transition-group and write more react.
 
 ## concept
 All habits have a trigger to them. When trying to quit an existing habit, a good strategy is to identify the triggers to the existing habit and replace it with a different action.
